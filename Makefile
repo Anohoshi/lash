@@ -3,7 +3,7 @@ TARGET = lash
 SRC_DIR = src
 INC_DIR = include
 
-SOURCES = $(wildcard $(SRC_DIR)/*.c)
+SOURCES = $(shell find $(SRC_DIR) -type f -name "*.c")
 
 $(TARGET): $(SOURCES)
 	$(CC) -o $(TARGET) $(SOURCES) -I$(INC_DIR)
