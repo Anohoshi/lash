@@ -4,9 +4,8 @@
 
 int main(void) {
   char buff[BUFSIZ];
-  char *prompt = get_prompt();
   while (true) {
-    fputs(prompt, stdout);
+    fputs(get_prompt(), stdout);
     fgets(buff, BUFSIZ, stdin);
   }
 }
